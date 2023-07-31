@@ -1,0 +1,25 @@
+.form {
+    width: 100%;
+    max-width: 400px; /* Adjust the maximum width as per your needs */
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+
+  .form_control {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #bebebe;
+    background-color: #fff0;
+    background-clip: padding-box;
+    border: var(--bs-border-width) solid #dee2e621;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: var(--bs-border-radius);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
