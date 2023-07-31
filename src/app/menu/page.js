@@ -5,6 +5,8 @@ import SignIn from '@/app/components/SignIn';
 import { useState, useEffect } from "react";
 import Header from "../components/header/page";
 import { useRouter } from 'next/navigation';
+import Drinks from "../components/menu/drinks/page";
+import LoadingView from "../LoadingView";
 
 export default function Menu() {
     const router = useRouter();    
@@ -66,11 +68,13 @@ export default function Menu() {
          <div className={`content-wrapper`} >
               {/*cards*/}
               <div className="content-section">
-                {/*  <Suspense fallback={<LoadingPage />}>
-               <Setups activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleOverlayChange={handleOverlayChange} apps={apps} setApps={setApps} handleDeleteClick={handleDeleteClick} />
+             <Suspense fallback={<LoadingView />}>
+              {/* <Setups activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleOverlayChange={handleOverlayChange} apps={apps} setApps={setApps} handleDeleteClick={handleDeleteClick} /> */}
+
+              <Drinks/>
 
 
-               </Suspense> */}
+               </Suspense> 
               </div>
             </div>
 
