@@ -1,0 +1,73 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+ model User {
+  UserID       Int       @id @default(autoincrement())
+  Username     String
+  Email        String    @unique
+  Password     String
+  FirstName    String
+  LastName     String
+  Address      String
+  PhoneNumber  String
+  DateAdded    DateTime  @default(now())
+  Orders       Order[]
+}
+
+model Product {
+  ProductID       Int       @id @default(autoincrement())
+  ProductName     String
+  Description     String
+  Price           Float
+  StockQuantity   Int
+  CategoryID      Int
+  ImageURL        String
+  DateAdded       DateTime  @default(now())
+  Category        Category  @relation(fields: [CategoryID], references: [CategoryID])
+  OrderItems      OrderItem[]
+  Reviews         Review[]
+}
+
+model Category {
+  CategoryID      Int       @id @default(autoincrement())
+  CategoryName    String
+  Products        Product[]
+}
+
+model Order {
+  OrderID         Int       @id @default(autoincrement())
+  UserID          Int
+  OrderDate       DateTime  @default(now())
+  TotalAmount     Float
+  ShippingAddress String
+  PaymentStatus   String
+  OrderStatus     String
+  OrderItems      OrderItem[]
+  User            User      @relation(fields: [UserID], references: [UserID])
+}
+
+model OrderItem {
+  OrderItemID     Int       @id @default(autoincrement())
+  OrderID         Int
+  ProductID       Int
+  Quantity        Int
+  Subtotal        Float
+  Order           Order     @relation(fields: [OrderID], references: [OrderID])
+  Product         Product   @relation(fields: [ProductID], references: [ProductID])
+}
+
+model Review {
+  ReviewID        Int       @id @default(autoincrement())
+  ProductID       Int
+  UserID          Int
+  Rating          Int
+  ReviewText      String
+  ReviewDate      DateTime  @default(now())
+  Product         Product   @relation(fields: [ProductID], references: [ProductID])
+  User            User      @relation(fields: [UserID], references: [UserID])
+}
