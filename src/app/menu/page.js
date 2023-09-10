@@ -51,42 +51,27 @@ export default function Menu() {
                 Drinks
               </div> */}              
               {/* Drinks */}
-              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i class="fa-solid fa-mug-hot"></i> Drinks </a>
+              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i className="fa-solid fa-mug-hot"></i> Drinks </a>
               {/* Food */}              
-              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i class="fa-solid fa-cookie-bite"></i> Food </a>
+              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i className="fa-solid fa-cookie-bite"></i> Food </a>
               {/* At home */}              
-              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i class="fa-solid fa-kitchen-set"></i> At Home </a>
+              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i className="fa-solid fa-kitchen-set"></i> At Home </a>
               {/* Serveware */}              
-              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i class="fa-solid fa-glass-water"></i> Serveware </a>
+              <a className="menu-link-main" style={{ marginRight: "20px", borderRadius: "6px", borderBottom: "1px solid #00800052", color: "var(--content-title-color)", }} href="#" onClick={DrinksClicked}> <i className="fa-solid fa-glass-water"></i> Serveware </a>
             </div> 
                                 
        <div className={`content-wrapper `} >
          {/*Main Section*/}
          <div className="content-section">
-         
-         
-         <div className={`content-wrapper`} >
-              {/*cards*/}
-              <div className="content-section">
+                           
+              {/*cards*/}         
              <Suspense fallback={<LoadingView />}>
-              {/* <Setups activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleOverlayChange={handleOverlayChange} apps={apps} setApps={setApps} handleDeleteClick={handleDeleteClick} /> */}
+                 {/* <Setups activeDropdown={activeDropdown} setActiveDropdown={setActiveDropdown} handleOverlayChange={handleOverlayChange} apps={apps} setApps={setApps} handleDeleteClick={handleDeleteClick} /> */}
+                 <Drinks/>
+            </Suspense>                         
 
-              <Drinks/>
-
-
-               </Suspense> 
-              </div>
-            </div>
-
-
-
-
-
-
-
-         <div className="divider"></div>
-   
-       <footer className="footer">
+           <div className="divider"></div>   
+           <footer className="footer">
          <div className="footer-container">
            <div className="social">
              <a href="https://spotify.com">
@@ -110,10 +95,10 @@ export default function Menu() {
            </div>
            <p>© 2023 Craft Coffee Company. All rights reserved.</p>
          </div>
-       </footer>
+           </footer>
     
               </div>
-            </div>
+      </div>
    
            
           </div>

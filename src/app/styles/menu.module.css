@@ -1,0 +1,7 @@
+.gridContainer {
+    display: grid;
+    grid-template-rows: min-content auto; /* First row takes minimum content size, second row auto-adjusts */    
+    padding: 20px;
+   
+  }
+  

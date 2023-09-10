@@ -35,6 +35,30 @@ const fakeProductData = [
       categoryID: 103,
       orderNum: 3,
     },
+    {
+      productID: 4,
+      name: "Product 4",
+      shortName: "Prod 4",
+      imgUrl: "img4.png",
+      imgUrlSmall:"thumb4.png",
+      description: "This is the third product description.",
+      bgColor: "#d752b1",
+      iconColor: "#00cc66",
+      categoryID: 104,
+      orderNum: 4,
+    },
+    {
+      productID: 5,
+      name: "Product 5",
+      shortName: "Prod 5",
+      imgUrl: "img5.png",
+      imgUrlSmall:"thumb5.png",
+      description: "This is the third product description.",
+      bgColor: "#d752b1",
+      iconColor: "#00cc66",
+      categoryID: 105,
+      orderNum: 5,
+    },
   ];
   
   export default fakeProductData;
